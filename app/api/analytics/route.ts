@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { requireCompany } from "@/lib/middleware";
-import { Prisma, ServiceCategory } from "@prisma/client";
+import { RequestStatus, Prisma, ServiceCategory } from "@prisma/client";
 
 // GET /api/analytics - Get analytics data (Company only)
 export async function GET(request: NextRequest) {
@@ -10,7 +10,7 @@ export async function GET(request: NextRequest) {
     if ("error" in authResult) {
       return authResult.error;
     }
-
+s
     const { user } = authResult;
     const { searchParams } = new URL(request.url);
     const startDate = searchParams.get("startDate");

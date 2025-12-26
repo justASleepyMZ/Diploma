@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { requireCompany } from "@/lib/middleware";
-import { RequestStatus, Prisma, ServiceCategory } from "@prisma/client";
+import { Prisma, ServiceCategory } from "@prisma/client";
 
 // GET /api/analytics - Get analytics data (Company only)
 export async function GET(request: NextRequest) {

@@ -22,7 +22,6 @@ enum ServiceCategory {
 
 enum RequestStatus {
   NEW
-  PENDING
   IN_PROGRESS
   COMPLETED
 }
